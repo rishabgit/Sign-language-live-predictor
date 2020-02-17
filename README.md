@@ -6,10 +6,10 @@ The system should be able to generate gestures for voice.
 The system should be able to generate voice for gestures.
 Dataset
 https://www.kaggle.com/kuzivakwashe/significant-asl-sign-language-alphabet-dataset 
-https://www.kaggle.com/grassknoted/asl-alphabet
+https://www.kaggle.com/grassknoted/asl-alphabet                                                                                           
 https://storage.googleapis.com/openimages/web/index.html
 
 References
-https://arxiv.org/abs/1512.02325 - https://github.com/qfgaohao/pytorch-ssd
-https://arxiv.org/abs/1512.03385
+https://arxiv.org/abs/1512.02325 - https://github.com/qfgaohao/pytorch-ssd                                                                 
+https://arxiv.org/abs/1512.03385                                                                                                           
 https://www.fast.ai/
