@@ -15,20 +15,33 @@ which uses https://storage.googleapis.com/openimages/web/index.html for labeled 
   
 ## Models
 For hand detection, SSD MobileNetV1 is used; and for sign language prediction, ResNet34 architecture.
-`wget -P models https://storage.googleapis.com/models-hao/mobilenet-v1-ssd-mp-0_675.pth`
-`wget -P models https://storage.googleapis.com/models-hao/voc-model-labels.txt`
+`wget -P models https://storage.googleapis.com/models-hao/mobilenet-v1-ssd-mp-0_675.pth`                                                 
+`wget -P models https://storage.googleapis.com/models-hao/voc-model-labels.txt`                                                           
 `python run_ssd_live_demo.py mb1-ssd models/mobilenet-v1-ssd-mp-0_675.pth models/voc-model-labels.txt`
    
  
 ## Training
 To replicate the exact results we saw in our project, run the following lines.  
 ### For MobileNetV1 part:
-`python train_ssd.py --dataset_type open_images --datasets ~/data/open_images --net mb1-ssd --pretrained_ssd models/mobilenet-v1-ssd-mp-0_675.pth --scheduler cosine --lr 0.001 --t_max 100 --validation_epochs 4 --num_epochs 20 --base_net_lr 0.001  --batch_size 32 --balance_data --num_workers 0`
+`python train_ssd.py --dataset_type open_images --datasets ~/data/open_images --net mb1-ssd --pretrained_ssd models/mobilenet-v1-ssd-mp-0_675.pth --scheduler cosine --lr 0.001 --t_max 100 --validation_epochs 4 --num_epochs 20 --base_net_lr 0.001  --batch_size 32 --balance_data --num_workers 0`                                                                                                             
 We stopped the training at epoch 8 (due to time constraint) and got good results. Feel free to train it for longer using different settings. For faster training, check out https://github.com/qfgaohao/pytorch-ssd/issues/19#issuecomment-467299010 
 ### For ResNet part:
 Run resnet_model.ipynb **You need fastai installed in your environment to run that.**
+  
+  
+ ## Testing
 
-References
-https://arxiv.org/abs/1512.02325 - https://github.com/qfgaohao/pytorch-ssd                                                                 
-https://arxiv.org/abs/1512.03385                                                                                                           
-https://www.fast.ai/
+After changing the model_path in line 26 of sign_lang_predictor.py, run 
+ `python sign_lang_predictor.py`                                                                                                         
+   
+   
+## Regarding any error
+It just be that I've forgot to upload some code or instruction in SSD part, so check out https://github.com/qfgaohao/pytorch-ssd 
+Still if you face any problem, please don't hesitate to open an issue.
+
+## References
+https://arxiv.org/abs/1512.02325 by Wei Liu and et al.                                                                                  
+  
+https://arxiv.org/abs/1512.03385 by Kaiming He and et al.       
+  
+https://www.fast.ai/ by Jeremy Howard and et al.
