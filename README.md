@@ -30,7 +30,8 @@ python run_ssd_live_demo.py mb1-ssd models/mobilenet-v1-ssd-mp-0_675.pth models/
 ## Training
 To replicate the exact results we saw in our project, run the following lines.  
 ### For MobileNetV1 part:
-```python train_ssd.py --dataset_type open_images --datasets ~/data/open_images --net mb1-ssd --pretrained_ssd models/mobilenet-v1-ssd-mp-0_675.pth --scheduler cosine --lr 0.001 --t_max 100 --validation_epochs 4 --num_epochs 20 --base_net_lr 0.001  --batch_size 32 --balance_data --num_workers 0
+```
+python train_ssd.py --dataset_type open_images --datasets ~/data/open_images --net mb1-ssd --pretrained_ssd models/mobilenet-v1-ssd-mp-0_675.pth --scheduler cosine --lr 0.001 --t_max 100 --validation_epochs 4 --num_epochs 20 --base_net_lr 0.001  --batch_size 32 --balance_data --num_workers 0
 ```                                                                                                             
 We stopped the training at epoch 8 (due to time constraint) and got good results. Feel free to train it for longer using different settings. For faster training, check out https://github.com/qfgaohao/pytorch-ssd/issues/19#issuecomment-467299010 
 ### For ResNet part:
