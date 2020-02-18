@@ -23,9 +23,7 @@ wget -P models https://storage.googleapis.com/models-hao/mobilenet-v1-ssd-mp-0_6
 ```
 wget -P models https://storage.googleapis.com/models-hao/voc-model-labels.txt                                                           
 ```
-```
-python run_ssd_live_demo.py mb1-ssd models/mobilenet-v1-ssd-mp-0_675.pth models/voc-model-labels.txt
-```   
+  
  
 ## Training
 To replicate the exact results we saw in our project, run the following lines.  
