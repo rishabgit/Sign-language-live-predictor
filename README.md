@@ -9,7 +9,9 @@ The system should be able to generate voice for gestures.
 ## Dataset
 Download https://www.kaggle.com/kuzivakwashe/significant-asl-sign-language-alphabet-dataset and move each ASL class's folder (currently 28 classes) inside data/training/ (inside the repo's folder).                                                                                 
 For the next dataset, run  
-`python open_images_downloader.py --root ~/data/open_images --class_names "Human hand" --num_workers 20`  
+```
+python open_images_downloader.py --root ~/data/open_images --class_names "Human hand" --num_workers 20
+```  
 which uses https://storage.googleapis.com/openimages/web/index.html for labeled dataset. Refer to  qfgaohao's https://github.com/qfgaohao/pytorch-ssd for more information.
   
   
