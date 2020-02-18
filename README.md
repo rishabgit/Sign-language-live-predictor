@@ -36,7 +36,7 @@ After changing the model_path in line 26 of sign_lang_predictor.py, run
    
    
 ## Regarding any error
-It just be that I've forgot to upload some code or instruction in SSD part, so check out https://github.com/qfgaohao/pytorch-ssd 
+Possibly I've might have just forgot to upload some code or instruction in SSD part, so check out https://github.com/qfgaohao/pytorch-ssd 
 Still if you face any problem, please don't hesitate to open an issue.
 
 ## References
