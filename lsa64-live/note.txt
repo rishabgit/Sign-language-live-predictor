@@ -1,0 +1,23 @@
+cd C:\Users\USER\test-asl
+activate cntk-py35
+python create_dataset.py -if ./testing -of ./dataset/new_test
+python train.py -if ./dataset/sequential -of models/run1 -lf logs/run1 -p 1
+
+
+Traceback (most recent call last):
+  File "train.py", line 303, in <module>
+    'prefix': args.prefix
+  File "train.py", line 251, in main
+    criterion.arguments[1]: mb_train[train_reader.streams.label]
+  File "C:\Users\USER\Anaconda3\envs\cntk-py35\lib\site-packages\cntk\train\trainer.py", line 181, in train_minibatch
+    arguments, device)
+  File "C:\Users\USER\Anaconda3\envs\cntk-py35\lib\site-packages\cntk\cntk_py.py", line 3069, in train_minibatch_overload_for_minibatchdata
+    return _cntk_py.Trainer_train_minibatch_overload_for_minibatchdata(self, *args)
+ValueError: The trailing dimensions of the Value shape '[16 x 3 x 66]' do not match the Variable 'Input('labels', [#, labelAxis], [30])' shape '[30]'.
+
+
+Header : 
+./dataset/headers/stack.config
+
+Chunk Size:
+131072
